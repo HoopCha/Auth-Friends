@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const Div = styled.div `
     height:10vh;
-    background:slategrey;
+    background:#94778B;
     display:flex;
     justify-content:space-evenly;
     width:100vw;
@@ -20,7 +20,7 @@ border-radius:5px;
 background:white
 width:100%;
 font-size:1.25em;
-    :hover{background:blue;
+    :hover{background:#74776B;
         color:white;
     }
 `
@@ -33,7 +33,7 @@ const Navbar = () => {
 
     return (
         <Div>
-            <H1>Client-Side Authentication</H1>
+            <H1>Friends!</H1>
             <NavLink to='/login'>
                     <Button onClick={logout}>Log Out</Button>
             </NavLink>

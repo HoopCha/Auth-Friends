@@ -10,6 +10,7 @@ text-align:center;
 background:white;
 border-radius:5px;
 border:2px solid darkgrey;
+background: #DFF8EB;
 `
 
 const Div = styled.div `
@@ -21,14 +22,6 @@ const Div = styled.div `
 const ButtonDiv = styled.div `
     margin-bottom:3%;
         
-`
-
-const EditButton = styled.button `
-    font-size:1em;
-    margin-right:3%;
-        :hover{
-            background:yellow;
-        }
 `
 
 const DeleteButton = styled.button `
@@ -69,10 +62,6 @@ const FriendsList = () => {
         .catch(err => console.log (err.response))
       }
 
-      const editFriend = friend => {
-        setEditingFriend(friend);
-      }
-
         return (
             <>
                 <AddFriend friends={friends} editingFriend={editingFriend} setEditingFriend={setEditingFriend}/>
@@ -83,7 +72,6 @@ const FriendsList = () => {
                             <p>Age: {friend.age}</p>
                             <p>Email: {friend.email}</p>
                             <ButtonDiv>
-                                <EditButton onClick={()=>editFriend(friend)}>Edit Info</EditButton>
                                 <DeleteButton onClick={()=>deleteFriend(friend.id)}>Delete</DeleteButton>
                             </ButtonDiv>
                         </FriendCard>

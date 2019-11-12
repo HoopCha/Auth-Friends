@@ -9,17 +9,18 @@ const H1 = styled.h1 `
 
 const Div = styled.div `
     text-align:center;
-    height:13vh;
+    height:150px;
     width:40%;
-    margin: 0 30% 0 30%;
-    background:silver;
+    margin: auto;
+    background:#82D4BB;
 `
 
 const Form = styled.form `
 `
 
 const Input = styled.input `
-    margin: 3% 1%;
+    padding: 5px;
+    margin: 5px;
 `
 
 const Button = styled.button `
@@ -27,7 +28,7 @@ const Button = styled.button `
     background:white
     width:10%;
     font-size:1em;
-        :hover{background:blue;
+        :hover{background:#74776B;
         color:white;
         }
 `
@@ -68,7 +69,6 @@ const AddFriend = (props) => {
 
     return (
         <>
-            
             <Div>
                 <H1>Add New Friend</H1>
                 <Form onSubmit={submitItem}>
